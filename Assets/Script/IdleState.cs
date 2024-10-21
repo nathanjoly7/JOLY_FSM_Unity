@@ -6,7 +6,7 @@ using UnityEngine.AI;
 public class IdleState : StateMachineBehaviour
 {
     float timer;
-    public float IdleTime = 5;
+    public float IdleTime = 3;
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
@@ -22,7 +22,7 @@ public class IdleState : StateMachineBehaviour
         if (timer > IdleTime)
         {
             Debug.Log("patrol start");
-            animator.SetFloat("Speed", 0.4f);
+            animator.SetFloat("Speed", 0.8f);
             animator.SetBool("IsWalking", true);
         }
         
