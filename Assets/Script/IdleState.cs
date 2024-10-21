@@ -22,6 +22,7 @@ public class IdleState : StateMachineBehaviour
         if (timer > IdleTime)
         {
             Debug.Log("patrol start");
+            animator.SetFloat("Speed", 0.4f);
             animator.SetBool("IsWalking", true);
         }
         

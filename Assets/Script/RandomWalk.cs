@@ -6,7 +6,6 @@ using UnityEngine.AI;
 public class RandomWalk : StateMachineBehaviour
 {
     NavMeshAgent agent;
-    public float RangeDetection = 5;
     public float RandomPointRange = 5; // Le rayon autour de soi où un point sera sélectionné
 
     // OnStateEnter est appelé quand une transition commence et que le state machine commence à évaluer cet état
