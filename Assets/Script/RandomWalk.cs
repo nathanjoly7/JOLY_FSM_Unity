@@ -5,24 +5,45 @@ using UnityEngine.AI;
 
 public class RandomWalk : StateMachineBehaviour
 {
-    NavMeshAgent agent;
-    public float RandomPointRange = 5; 
+    private NavMeshAgent agent;
+    public float RandomPointRange = 5;
+    public float detectionRadius = 10f; // Rayon de détection des ennemis
 
-    // OnStateEnter est appelé quand une transition commence et que le state machine commence à évaluer cet état
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         agent = animator.GetComponent<NavMeshAgent>();
-        agent.speed = 2;
-
-        // Générer et aller vers un point aléatoire au début du state
+        agent.speed = 1.5f;
         Vector3 randomPoint = GetRandomPointAroundSelf(animator.transform.position, RandomPointRange);
         agent.SetDestination(randomPoint);
     }
 
-    // OnStateUpdate est appelé sur chaque frame Update entre OnStateEnter et OnStateExit
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        // Si l'agent atteint son point de destination, choisir un autre point
+        float speed = agent.velocity.magnitude;
+        animator.SetFloat("Speed", speed);
+
+        // Vérification de la proximité d'un objet avec le tag "Enemy"
+        Collider[] hitColliders = Physics.OverlapSphere(agent.transform.position, detectionRadius);
+        bool enemyDetected = false;
+
+        foreach (var collider in hitColliders)
+        {
+            if (collider.CompareTag("Enemy"))
+            {
+                enemyDetected = true;
+                break;
+            }
+        }
+
+        if (enemyDetected)
+        {
+            animator.SetBool("IsChasing", true); // Mettez IsChasing à true si un ennemi est détecté
+        }
+        else
+        {
+            animator.SetBool("IsChasing", false); // Remettez IsChasing à false si aucun ennemi n'est détecté
+        }
+
         if (!agent.pathPending && agent.remainingDistance <= agent.stoppingDistance)
         {
             Vector3 randomPoint = GetRandomPointAroundSelf(animator.transform.position, RandomPointRange);
@@ -30,13 +51,11 @@ public class RandomWalk : StateMachineBehaviour
         }
     }
 
-    // OnStateExit est appelé quand une transition se termine et que le state machine finit d'évaluer cet état
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
-        agent.SetDestination(agent.transform.position); // Stopper le mouvement
+        agent.SetDestination(agent.transform.position);
     }
 
-    // Fonction pour obtenir un point aléatoire autour du transform de l'agent dans un rayon donné
     private Vector3 GetRandomPointAroundSelf(Vector3 origin, float range)
     {
         Vector3 randomDirection = Random.insideUnitSphere * range;
@@ -49,7 +68,7 @@ public class RandomWalk : StateMachineBehaviour
         }
         else
         {
-            return origin; // Si un point valide n'est pas trouvé, rester à la position actuelle
+            return origin;
         }
     }
 }
