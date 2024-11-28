@@ -133,7 +133,7 @@ PrefabInstance:
     - target: {fileID: 3098758889639016178, guid: 5c90eca246d88f444a34937db6ddcc44,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.02
+      value: 2.4
       objectReference: {fileID: 0}
     - target: {fileID: 3098758889639016178, guid: 5c90eca246d88f444a34937db6ddcc44,
         type: 3}
@@ -143,7 +143,7 @@ PrefabInstance:
     - target: {fileID: 3098758889639016178, guid: 5c90eca246d88f444a34937db6ddcc44,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -4.2
+      value: -6.4
       objectReference: {fileID: 0}
     - target: {fileID: 3098758889639016178, guid: 5c90eca246d88f444a34937db6ddcc44,
         type: 3}
@@ -190,6 +190,17 @@ PrefabInstance:
       propertyPath: m_Radius
       value: 0.84
       objectReference: {fileID: 0}
+    - target: {fileID: 5922376685204551299, guid: 5c90eca246d88f444a34937db6ddcc44,
+        type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 203458371695166868, guid: 8cbeb0fb8d92d9e4193f3259573ec74b,
+        type: 3}
+    - target: {fileID: 7576503023174221163, guid: 5c90eca246d88f444a34937db6ddcc44,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.19
+      objectReference: {fileID: 0}
     - target: {fileID: 7584428110529664567, guid: 5c90eca246d88f444a34937db6ddcc44,
         type: 3}
       propertyPath: m_Name
@@ -208,6 +219,17 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3006290361852929274, guid: 904ee67dd7fbb6346a4b6e819f41b215,
+        type: 3}
+      propertyPath: m_WarningMessage
+      value: "\nBinding warning: Some generic clip(s) animate transforms that are
+        already bound by a Humanoid avatar. These transforms can only be changed
+        by Humanoid clips.\n\tTransform 'mixamorig:Hips'\n\tTransform 'mixamorig:LeftFoot'\n\tTransform
+        'mixamorig:Spine1'\n\tTransform 'mixamorig:LeftToeBase'\n\tTransform 'mixamorig:RightArm'\n\tTransform
+        'mixamorig:LeftLeg'\n\tTransform 'mixamorig:LeftShoulder'\n\tTransform 'mixamorig:RightFoot'\n\tTransform
+        'mixamorig:Head'\n\tTransform 'mixamorig:LeftUpLeg'\n\tand more ...\n\tFrom
+        animation clip 'jump'"
+      objectReference: {fileID: 0}
     - target: {fileID: 692466134346483489, guid: 904ee67dd7fbb6346a4b6e819f41b215,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -222,6 +244,26 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalPosition.z
       value: -1.59
+      objectReference: {fileID: 0}
+    - target: {fileID: 3025875120300880834, guid: 904ee67dd7fbb6346a4b6e819f41b215,
+        type: 3}
+      propertyPath: m_BackGroundColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3025875120300880834, guid: 904ee67dd7fbb6346a4b6e819f41b215,
+        type: 3}
+      propertyPath: m_BackGroundColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3025875120300880834, guid: 904ee67dd7fbb6346a4b6e819f41b215,
+        type: 3}
+      propertyPath: m_BackGroundColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3025875120300880834, guid: 904ee67dd7fbb6346a4b6e819f41b215,
+        type: 3}
+      propertyPath: m_BackGroundColor.r
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3468349800957336122, guid: 904ee67dd7fbb6346a4b6e819f41b215,
         type: 3}
