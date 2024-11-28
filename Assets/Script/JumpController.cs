@@ -25,7 +25,7 @@ public class JumpController : MonoBehaviour
         animator.SetBool("IsJumping", true);  
 
         
-        Invoke("StopJump", 0.9f);
+        Invoke("StopJump", 0.98f);
     }
 
     void StopJump()
