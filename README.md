@@ -14,3 +14,18 @@ Une fois l'ennemi atteint, il joue l'animation d'attaque en boucle.
 Appuyer sur espace pour sauter pendant l'idle ou la patrouille.
 Appuyer sur E pour attaquer.
 
+-> Demain vous arrivez dans un studio disposant d’un moteur que vous ne connaissez pas, 
+de quoi avez-vous besoin pour intégrer le travail des graphistes dans votre proto ? 
+que demandez-vous ? 
+quelles questions posez-vous et à qui ?
+
+Je demande aux artistes : 
+Dans quelle format vais-je recevoir les assets ?
+Sous quelle forme seront les matériaux / textures ?
+
+
+Je demande au développeurs du moteur: 
+Comment faire en sorte d'adapter le rig de l'animation au squelette du personnage.
+Comment faire un FSM dans leur moteur, créer des states, des transitions, etc.
+Comment le moteur gère le blend entre plusieures animations ?
+
