@@ -1,6 +1,6 @@
 # JOLY_FSM_Unity
  
-Contenu du projet
+## Contenu du projet
 
 Idle --> Patrol --> Chase --> Attack
 
@@ -14,6 +14,7 @@ Une fois l'ennemi atteint, il joue l'animation d'attaque en boucle.
 Appuyer sur espace pour sauter pendant l'idle ou la patrouille.
 Appuyer sur E pour attaquer pendant un autre state.
 
+## Questions
 -> Demain vous arrivez dans un studio disposant d’un moteur que vous ne connaissez pas, 
 de quoi avez-vous besoin pour intégrer le travail des graphistes dans votre proto ? 
 que demandez-vous ? 
@@ -21,7 +22,9 @@ quelles questions posez-vous et à qui ?
 
 Je demande aux artistes : 
 Dans quelle format vais-je recevoir les assets ?
-Sous quelle forme seront les matériaux / textures ?
+Quelle est le protocole de nommage des assets ?
+Sous quelle forme seront les matériaux / textures et comment les implémenter ?
+
 
 
 Je demande au développeurs du moteur: 
